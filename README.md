@@ -1,2 +1,2 @@
 # website
-seb sahifalar uchun
+web sahifalar uchun
