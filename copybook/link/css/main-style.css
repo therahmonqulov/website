@@ -1,0 +1,239 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: #FAF5FF;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+.navbar a {
+    color: #a59d9d;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+.navbar li {
+    margin: 10px 20px;
+    list-style: none;
+    display: inline-block;
+}
+
+/* body */
+.body {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-span {
+    letter-spacing: -3px;
+    font-weight: 700;
+    font-size: 130px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #383333;
+}
+.search-box {
+    /* box-shadow: 0px 0px 3px #3b393988; */
+    border: 1px solid #d6c8c8a1;
+    padding: 2px;
+    background-color: #eee5e5;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.search {
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search-input {
+    color: #000;
+    background-color: #eee5e5;
+    font-size: 16px;
+    padding: 8px 5px;
+    outline: none;
+    width: 100%;
+    border: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.keyboard {
+    margin-left: 2px;
+    background-color: unset;
+    padding: 9px 8px 4px 0px;
+    border: none;
+    cursor: pointer;
+}
+.search-button {
+    background-color: unset;
+    padding: 2px 10px 0px 5px;
+    border: none;
+    cursor: pointer;
+}
+.search button:focus {
+    outline: none;
+}
+.main-section-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.main-section-button button {
+    background-color: #e0d2d2b2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 6px 14px;
+    margin: 0px 15px;
+    border: 1px solid #d6c8c8a1;
+}
+.setting-box{
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 510px;
+    background-color: #fdfff5;
+    box-shadow: 1px 1px 1px 100vh #666262b9;
+}
+.setting-box-navbar{
+    display: flex;
+    justify-content: space-between;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 20px;
+    border-bottom: 1px solid #bdacacb2;
+}
+.setting-box-body {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.setting-box-navbar button {
+    cursor: pointer;
+    background-color: red;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 0px 9px;
+    border: none;
+}
+/* .setting-box-body{
+} */
+.setting img {
+    width: 25px;
+}
+.setting-button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 7px 7px 3px 7px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px #000;
+    position: absolute;
+    right: 18px;
+    bottom: 16px;
+}
+.setting button:focus {
+    outline: none;
+}
+
+
+/* Radio tugmalarni yashiramiz */
+input[type="radio"] {
+    display: none;
+}
+
+/* Umumiy stil */
+label {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0px 5px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Radio tugmalar uchun maxsus doira */
+label::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    transition: 0.3s;
+}
+
+/* Tugmalar tanlanganda */
+input[type="radio"]:checked + label::before {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* Oq tugma */
+.radio-white + label {
+    background: #fff;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+.radio-white:checked + label {
+    background: #eee;
+    border-color: #333;
+}
+
+/* Qora tugma */
+.radio-black + label {
+    background: #222;
+    color: #fff;
+    border: 2px solid #444;
+}
+
+.radio-black:checked + label {
+    background: #000;
+    border-color: #fff;
+}
+
+
+.social-btn {
+    padding: 0px 10px;
+    color: #000;
+    text-decoration: none;
+    background-color: #e0d2d2b2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0px 15px;
+    border: 1px solid #d6c8c8a1;
+}
+
+.social-btn i {
+    font-size: 20px;
+}
